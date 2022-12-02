@@ -45,7 +45,6 @@ namespace A5MPurvis
                             studentExists = true;
                             myStudent = AddStudent();
                             Console.Clear();
-                           
                         }
                         else
                         {
@@ -63,10 +62,8 @@ namespace A5MPurvis
                         break;
                     case "C":
                         Console.Clear();
-
                         myStudent.DisplayStudentInformation();
                         Console.Clear();
-
                         break;
                     case "D":
                         menuExit = true;

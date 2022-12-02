@@ -24,7 +24,6 @@ namespace A5MPurvis
             this.studentCity = studentCity;
         }
 
-
         public Student()
         {
             //Constructor default
@@ -80,50 +79,56 @@ namespace A5MPurvis
         //TODO User able to enter "QUIT" to return to menu
         public void DisplayStudentInformation()
         {
-            string studentSearch;
-            try
+                string studentSearch = "";
+
+            do
             {
-                Console.WriteLine("[Display Student Information]\n");
-                Console.Write("Search Student by Name: ");
-                studentSearch = Console.ReadLine();
-               
-                //if record exists, Display Name|Age|City 
-                if (studentSearch == studentName)
+                try
                 {
-                    Console.WriteLine("\nName: {0}|City: {1}|Age: {2}",studentName,studentCity,studentAge);
+                    Console.WriteLine("[Display Student Information]\n");
+                    Console.Write("Search Student by Name or Enter \"QUIT\": ");
+                    studentSearch = Console.ReadLine();
+
+                    //if record exists, Display Name|Age|City 
+                    if (studentSearch == studentName)
+                    {
+                        Console.WriteLine("\nName: {0}|City: {1}|Age: {2}", studentName, studentCity, studentAge);
+                        Console.WriteLine("\nPress any key to return to menu");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                    }
+                    else if (studentSearch == "QUIT")
+                    {
+                        Console.Clear();
+                        break;
+                    }
+                    //else if the record does not exist notify the user
+                    else if (studentSearch != studentName)
+                    {
+                        Console.WriteLine("No student record exists, Press any key to re-enter");
+                        Console.ReadKey();
+                        Console.Clear();
+                    }
+                   
+                }
+                catch (FormatException fEx)
+                {
+                    Console.WriteLine(fEx.Message);
                     Console.WriteLine("\nPress any key to return to menu");
                     Console.ReadKey();
                     Console.Clear();
                 }
-                //else if the record does not exist notify the user
-                else if (studentSearch != studentName)
+                catch (Exception ex)
                 {
-                    Console.WriteLine("No student record exists, Press any key to return to menu");
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("\nPress any key to return to menu");
                     Console.ReadKey();
                     Console.Clear();
-
                 }
-            }
-            catch (FormatException fEx)
-            {
-                Console.WriteLine(fEx.Message);
-                Console.WriteLine("\nPress any key to return to menu");
-                Console.ReadKey();
-                Console.Clear();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("\nPress any key to return to menu");
-                Console.ReadKey();
-                Console.Clear();
-            }
+              
+            } while (studentSearch != "QUIT" );
            
         }
-
-
-
-
-
     }
 }
