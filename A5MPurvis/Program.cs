@@ -23,53 +23,78 @@ namespace A5MPurvis
             bool menuExit = false;
             bool studentExists = false;
             Student myStudent = null;
-            
-            //TODO: Try Catch for null myStudent
-            do
+            try
             {
-                Console.WriteLine("[Main Menu]\n");
-                Console.WriteLine("A) Add New Student");
-                Console.WriteLine("B) Edit Existing Student");
-                Console.WriteLine("C) Display Student");
-                Console.WriteLine("D) Exit the Program");
-                Console.Write("Select A Menu Option: ");
-                menuInput = Console.ReadLine();
-                menuInput = menuInput.ToUpper();
-
-                switch (menuInput)
+                do
                 {
-                    case "A":
-                        if (studentExists == false)
-                        {
+                    Console.WriteLine("[Main Menu]\n");
+                    Console.WriteLine("A) Add New Student");
+                    Console.WriteLine("B) Edit Existing Student");
+                    Console.WriteLine("C) Display Student");
+                    Console.WriteLine("D) Exit the Program");
+                    Console.Write("Select A Menu Option: ");
+                    menuInput = Console.ReadLine();
+                    menuInput = menuInput.ToUpper();
+
+                    switch (menuInput)
+                    {
+                        case "A":
+                            if (studentExists == false)
+                            {
+                                Console.Clear();
+                                studentExists = true;
+                                myStudent = AddStudent();
+                                Console.Clear();
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("\n[A Student record already exists]\n");
+                                Console.WriteLine("\nPress Any Key to return to menu");
+                                Console.ReadKey();
+                                Console.Clear();
+                            }
+                            break;
+                        case "B":
                             Console.Clear();
-                            studentExists = true;
-                            myStudent = AddStudent();
+                            if(myStudent== null)
+                            { 
+                                Console.WriteLine("No student record exists, Press any key to return to menu");
+                                Console.ReadKey();
+                                Console.Clear();
+
+                            }
+                            else
+                            {
+                                myStudent.EditStudentInformation();
+                            }
                             Console.Clear();
-                        }
-                        else
-                        {
+                            break;
+                        case "C":
                             Console.Clear();
-                            Console.WriteLine("\n[A Student record already exists]\n");
-                            Console.WriteLine("\nPress Any Key to return to menu");
-                            Console.ReadKey();
+                            if (myStudent == null)
+                            {
+                                Console.WriteLine("No student record exists, Press any key to return to menu");
+                                Console.ReadKey();
+                                Console.Clear();
+
+                            }
+                            else
+                            {
+                                myStudent.DisplayStudentInformation();
+
+                            }
                             Console.Clear();
-                        }
-                        break;
-                    case "B":
-                        Console.Clear();
-                        myStudent.EditStudentInformation();
-                        Console.Clear();
-                        break;
-                    case "C":
-                        Console.Clear();
-                        myStudent.DisplayStudentInformation();
-                        Console.Clear();
-                        break;
-                    case "D":
-                        menuExit = true;
-                        break;
-                }
-            } while (menuExit == false);
+                            break;
+                        case "D":
+                            menuExit = true;
+                            break;
+                    }
+                } while (menuExit == false);
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
             
             
         }

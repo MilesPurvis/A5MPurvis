@@ -36,6 +36,7 @@ namespace A5MPurvis
         public void EditStudentInformation()
         {
             int studentIdSearch;
+            string editInput;
             try
             {
                 Console.WriteLine("[Edit Student Information]\n");
@@ -45,7 +46,55 @@ namespace A5MPurvis
 
                 if (studentIdSearch == studentId)
                 {
+                    Console.Clear();
+                    //Display Record of Student
+                    Console.WriteLine("[Now editing: Student {0} | Age: {1} | City: {2} | Id#: {3}]\n",studentName,studentAge,studentCity,studentId);
+
+                    //Edit ID
+                    //Edit Name
+                    //Edit Age
+                    //Edit City
+                    Console.WriteLine("A) Edit Student ID");
+                    Console.WriteLine("B) Edit Student Name");
+                    Console.WriteLine("C) Edit Student Age");
+                    Console.WriteLine("D) Edit Student City");
+
                     //Allow user to edit the student
+                    Console.Write("Which field would you like to edit: ");
+                    editInput = Console.ReadLine();
+                    editInput = editInput.ToUpper();
+
+     
+                    Console.Clear();
+
+                    switch (editInput)
+                    {
+                        case "A":
+                            Console.WriteLine("[Now editing: Student {0} | Age: {1} | City: {2} | Id#: {3}]\n", studentName, studentAge, studentCity, studentId);
+
+                            Console.Write("\nNew Student ID: ");
+                            studentId = int.Parse(Console.ReadLine());
+                            break;
+                        case "B":
+                            Console.WriteLine("[Now editing: Student {0} | Age: {1} | City: {2} | Id#: {3}]\n", studentName, studentAge, studentCity, studentId);
+
+                            Console.Write("\nNew Student Name: ");
+                            studentName = Console.ReadLine();
+                            break;
+                        case "C":
+                            Console.WriteLine("[Now editing: Student {0} | Age: {1} | City: {2} | Id#: {3}]\n", studentName, studentAge, studentCity, studentId);
+
+                            Console.Write("\nNew Student Age: ");
+                            studentAge = int.Parse(Console.ReadLine());
+                            break;
+                        case "D":
+                            Console.WriteLine("[Now editing: Student {0} | Age: {1} | City: {2} | Id#: {3}]\n", studentName, studentAge, studentCity, studentId);
+
+                            Console.Write("\nNew Student City: ");
+                            studentCity = Console.ReadLine();
+                            break;
+                    }
+                   
 
                 }
                 //else if the record does not exist notify the user
@@ -75,8 +124,6 @@ namespace A5MPurvis
             }
         }
 
-        //TODO Prompt user to re enter if invalid
-        //TODO User able to enter "QUIT" to return to menu
         public void DisplayStudentInformation()
         {
                 string studentSearch = "";
