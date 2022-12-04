@@ -64,7 +64,6 @@ namespace A5MPurvis
                     editInput = Console.ReadLine();
                     editInput = editInput.ToUpper();
 
-     
                     Console.Clear();
 
                     switch (editInput)
@@ -94,7 +93,6 @@ namespace A5MPurvis
                             studentCity = Console.ReadLine();
                             break;
                     }
-                   
 
                 }
                 //else if the record does not exist notify the user
@@ -104,7 +102,6 @@ namespace A5MPurvis
                     Console.WriteLine("\nPress Any Key to return to menu");
                     Console.ReadKey();
                     Console.Clear();
-
                 }
 
             }

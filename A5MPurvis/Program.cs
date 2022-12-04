@@ -62,7 +62,6 @@ namespace A5MPurvis
                                 Console.WriteLine("No student record exists, Press any key to return to menu");
                                 Console.ReadKey();
                                 Console.Clear();
-
                             }
                             else
                             {
@@ -90,6 +89,7 @@ namespace A5MPurvis
                             menuExit = true;
                             break;
                     }
+                    Console.Clear() ;
                 } while (menuExit == false);
             }catch(Exception e)
             {
@@ -102,35 +102,46 @@ namespace A5MPurvis
         // Take information for student
         public static Student AddStudent()
         {
+            bool studentAdd;
+
             Console.WriteLine("[Add Student]\n");
-            try
+            do
             {
-                Console.Write("Enter Student ID Number: ");
-                int stuId = int.Parse(Console.ReadLine());
+                try
+                {
+                    Console.Write("Enter Student ID Number: ");
+                    int stuId = int.Parse(Console.ReadLine());
 
-                Console.Write("\nEnter Student Name: ");
-                string stuName = Console.ReadLine();
+                    Console.Write("\nEnter Student Name: ");
+                    string stuName = Console.ReadLine();
 
-                Console.Write("\nEnter Sutdent Age: ");
-                int stuAge = int.Parse(Console.ReadLine());
+                    Console.Write("\nEnter Sutdent Age: ");
+                    int stuAge = int.Parse(Console.ReadLine());
 
-                Console.Write("\nEnter Student City: ");
-                string stuCity = Console.ReadLine();
+                    Console.Write("\nEnter Student City: ");
+                    string stuCity = Console.ReadLine();
 
-                Student myStudent = new Student(stuId, stuName, stuAge, stuCity);
+                    Student myStudent = new Student(stuId, stuName, stuAge, stuCity);
+                    studentAdd = true;
+                    return myStudent;                   
+                }
+                catch (FormatException fEx)
+                {
+                    studentAdd = false;
+                    Console.WriteLine(fEx.Message);
+                    Console.Clear();
+                    Console.ReadKey();
+                    
+                }
+                catch (Exception ex)
+                {
+                    studentAdd = false;
+                    Console.WriteLine(ex.Message);
+                    Console.Clear();
+                    Console.ReadKey();
+                }
+            } while (studentAdd == false);
 
-                return myStudent;
-            }
-            catch (FormatException fEx)
-            {
-                Console.WriteLine(fEx.Message);
-                Console.ReadKey();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                Console.ReadKey();
-            }
             return null;
         }
     }
