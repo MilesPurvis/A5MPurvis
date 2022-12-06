@@ -1,0 +1,16 @@
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\bin\Debug\A5MPurvis.exe.config
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\bin\Debug\A5MPurvis.exe
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\bin\Debug\A5MPurvis.pdb
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.csproj.AssemblyReference.cache
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.csproj.SuggestedBindingRedirects.cache
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.csproj.CoreCompileInputs.cache
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.exe
+C:\Users\miles\Desktop\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.pdb
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\bin\Debug\A5MPurvis.exe.config
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\bin\Debug\A5MPurvis.exe
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\bin\Debug\A5MPurvis.pdb
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.csproj.AssemblyReference.cache
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.csproj.SuggestedBindingRedirects.cache
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.csproj.CoreCompileInputs.cache
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.exe
+C:\Users\Miles\Downloads\A5MPurvis\A5MPurvis\A5MPurvis\obj\Debug\A5MPurvis.pdb

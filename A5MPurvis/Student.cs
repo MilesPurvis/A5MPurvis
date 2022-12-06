@@ -29,10 +29,6 @@ namespace A5MPurvis
             //Constructor default
         }
 
-        //TODO Allow user to Edit Student
-        //TODO Edit Name
-        //TODO Edit Age
-        //TODO Edit City
         public void EditStudentInformation()
         {
             int studentIdSearch;

@@ -115,7 +115,7 @@ namespace A5MPurvis
                     Console.Write("\nEnter Student Name: ");
                     string stuName = Console.ReadLine();
 
-                    Console.Write("\nEnter Sutdent Age: ");
+                    Console.Write("\nEnter Student Age: ");
                     int stuAge = int.Parse(Console.ReadLine());
 
                     Console.Write("\nEnter Student City: ");
@@ -129,16 +129,15 @@ namespace A5MPurvis
                 {
                     studentAdd = false;
                     Console.WriteLine(fEx.Message);
-                    Console.Clear();
                     Console.ReadKey();
-                    
+                    Console.Clear();
                 }
                 catch (Exception ex)
                 {
                     studentAdd = false;
                     Console.WriteLine(ex.Message);
-                    Console.Clear();
                     Console.ReadKey();
+                    Console.Clear();
                 }
             } while (studentAdd == false);
 
